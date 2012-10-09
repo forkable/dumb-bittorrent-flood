@@ -1,3 +1,4 @@
+This code is ancient. :)
 Long time ago I was testing if it was possible to slow down my servers by using
 public bittorrent trackers. The idea was to go to some public torrent indexing site, 
 get the list of most popular torrents, download them, and then announce my server's 
