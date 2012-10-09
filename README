@@ -1,0 +1,19 @@
+Long time ago I was testing if it was possible to slow down my servers by using
+public bittorrent trackers. The idea was to go to some public torrent indexing site, 
+get the list of most popular torrents, download them, and then announce my server's 
+IP address and port to the tracker, making other bittorrent clients make lots of 
+requests to my server (thinking it is another client).
+
+While it didn't really make an impact on the performance of my site, it caused
+a lot of incoming connections (that were dropped because they were doing bittorrent
+handshake).
+
+Even if it didn't slow things down, I found out something interesting.
+There were some bittorrent clients making requests long after the IP address was 
+removed from the tracker. It seems like there are other bots out there that are 
+either making random noise or looking for other torrents you could have loaded in
+your clients.
+The morale of the story is - watch out when using public bittorrent trackers.
+
+Also, the code was put up together really quickly and looks really messy.
+And PHP wasn't really made to do tasks in parallel. :D
